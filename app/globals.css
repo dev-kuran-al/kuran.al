@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 html,
 body {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.arabicFont {
+	font-family: 'Traditional Arabic', Scheherazade, 'Times New Roman', sans-serif;
 }

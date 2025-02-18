@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-	title: 'Kuran Shqip',
-	description: 'Kuran.al eshte website faqe webi per perkthim dhe komentim the Kuran-it famelarte',
+	title: 'Lexo Kuran Shqip',
+	description: 'LexoKuran.al është website faqe webi për përkthim dhe komentim e Kuran-it famëlartë',
 };
 
 export default function RootLayout({
