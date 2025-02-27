@@ -1,16 +1,14 @@
 import Image from 'next/image';
-import React from 'react';
-
 import { Metadata } from 'next';
 import PlayQuran from '../_components/PlayQuran';
 
 type PageProps = {
-	params: { id: string };
+	params: { id: string }; // ✅ Ensured params is correct
 };
 
 // Define metadata dynamically for each page
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-	const { id } = await params; // Ensure params is awaited before use
+	const { id } = params; // ✅ Removed unnecessary await
 
 	return {
 		title: `Faqja ${id} - Lexo Kuran`,
@@ -25,15 +23,12 @@ export async function generateStaticParams() {
 }
 
 const QuranPage = async ({ params }: PageProps) => {
-	const { id } = await params;
-	console.log('🚀 ~ QuranPage ~ id:', id);
+	const { id } = params; // ✅ Removed unnecessary await
 
 	return (
 		<div className='flex flex-col justify-center items-center max-w-7xl gap-4 mx-auto'>
 			<h1>Quran page - {id}</h1>
-
 			<PlayQuran id={id} />
-
 			<div>
 				<Image src={`/img/quran/${id}.jpg`} className='bg-contain w-full h-full md:w-[700px] md:h-[1100px]' alt='quran page' width={700} height={1100} />
 			</div>
