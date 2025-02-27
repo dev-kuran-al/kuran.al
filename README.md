@@ -1,2 +1,3 @@
-### Kuran.al
-# kuran.al
+### LexoKuran.al
+
+# lexokuran.al
