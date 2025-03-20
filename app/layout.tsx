@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/landing/Footer';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
+import GoogleAnalytics from '@/components/GoogleAnalitics';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -28,6 +29,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			<head>
+				<GoogleAnalytics />
+			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
 				{/* TODO ? dark mode */}
 				<AntdRegistry>
